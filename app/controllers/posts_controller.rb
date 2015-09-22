@@ -11,6 +11,7 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @comments = @post.comments
+    @vote_count = @post.vote_count
   end
 
   # GET /posts/new

@@ -2,10 +2,10 @@ Rails.application.routes.draw do
   devise_for :users
   resources :posts
 
-  get '/post/:post-title' => "post#show", as: 'post_by_title'
-
+  get "/post/:post_id/vote/new" => "votes#upvote", as: "upvote_post"
   get '/comments/new/:post_id' => "comments#new", as: 'new_comment'
   resources :comments, except: :new
+
 
   
 
