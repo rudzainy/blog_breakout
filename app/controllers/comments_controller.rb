@@ -30,11 +30,10 @@ class CommentsController < ApplicationController
   # POST /comments.json
   def create
     @comment = Comment.new(comment_params)
-    byebug
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to @comment, notice: 'Comment was successfully created.' }
+        format.html { redirect_to comment_path, notice: 'Comment was successfully created.' }
         format.json { render :show, status: :created, location: @comment }
         format.js
       else

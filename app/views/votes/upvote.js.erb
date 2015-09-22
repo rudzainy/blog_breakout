@@ -1,0 +1,8 @@
+if(<%= @vote %> === false){
+	alert("you can only vote once")
+}else{
+	alert("you have upvote")
+	var voteCount = parseInt($('#voteCounter').text())
+	voteCount += 1
+	$('#voteCounter').text(voteCount)
+}
