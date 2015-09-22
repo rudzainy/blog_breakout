@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'tags/new'
+
+  get 'tags/create'
+
   devise_for :users
   resources :posts
 
